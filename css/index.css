@@ -161,16 +161,16 @@ h2 {
 }
 
 .static-navbar {
-  top: 0;
   width: 100%;
-  outline: red solid 2px;
+  /* outline: red solid 2px; */
 }
 .static-navbar img {
   margin-top: 19px;
+  display: inline-block;
 }
 
 nav {
-  display: block;
+  display: inline-block;
   width: 880px;
   height: 100px;
   margin: 0 auto;
@@ -209,7 +209,7 @@ img {
   flex-direction: column;
   width: 880px;
   margin: 2px auto 0 auto;
-  outline: red solid 2px;
+  /* outline: red solid 2px; */
 }
 
 header {
@@ -321,7 +321,7 @@ footer p {
 }
 
 .service-section {
-	outline: green solid 5px;
+	/* outline: green solid 5px; */
 	display: flex;
 	/* flex-direction:column; */
 	flex-wrap: wrap;
@@ -336,18 +336,49 @@ footer p {
 /* Media Queries below here */
 
 @media (max-width: 800px){
+body {
+  /* display: flex; */
+  /* justify-content: center; */
+}
 .static-navbar {
-  outline: cadetblue solid 3px;
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+  /* outline: cadetblue solid 3px; */
 }
 .website-wrapper {
-  width: 750px;
-  margin: 0;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 95%;
+  margin: auto;
+}
+.website-wrapper div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header div{
+  margin: 20px auto 10px auto;
+}
+header {
+  height: 380px;
 }
 .static-navbar nav {
   margin: 0;
-  width: 100%;
+  width: 90%;
+  /* outline: blue solid 2px; */
+}
+.static-navbar nav a {
+  color: grey;
 }
 .header-img{
   visibility: hidden;
+}
+}
+@media (max-width: 500px){
+.website-wrapper {
+  outline: pink solid 2px;
 }
 }
